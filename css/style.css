@@ -1,0 +1,325 @@
+@font-face {
+    font-family: "bfg font";
+    src: url("../BFGFont.woff") format("truetype"); /*("BFG Font by FZ - FontSpace", 2017)*/
+}
+body {
+  margin: 0px;
+  background: url("../images/wall.jpg") no-repeat fixed; /*("italian-landscape-mountains-nature", 2017)*/
+}
+/*****************************Navigation Bar***********************************/
+.topNav {
+  background: url("../images/gplaypattern.png") repeat fixed;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+.topNav ul {
+  margin: 0px;
+  padding: 0px;
+}
+.topNav ul li{
+  display: inline;
+  text-align: center;
+  font-family: "bfg font", Arial;
+}
+.topNav a {
+  display: inline-block;
+  width: 192px;
+  padding: 0.75rem 0;
+  font-size: 1.2em;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+.active a{
+  color: rgb(48, 181, 255);
+}
+li.home:hover ~ li hr, .active.home ~ li hr {
+  margin-left: 0%;
+}
+li.chapterselect:hover ~ li hr, .active.chapterselect ~ li hr {
+  margin-left: 192px;
+}
+li.dictionary:hover ~ li hr, .active.dictionary ~ li hr {
+  margin-left: 384px;
+}
+li.other:hover ~ li hr, .active.other ~ li hr {
+  margin-left: 576px;
+}
+.topNav li hr {
+  height: .25rem;
+  width: 192px;
+  margin: 0;
+  background: rgb(48, 181, 255);
+  border: none;
+  transition: .3s ease-in-out;
+}
+.subNav{
+  list-style: none;
+	position: absolute;
+  display: none;
+  left: 576px;
+	top: 50px;
+	background: url("../images/gplaypattern.png") repeat fixed;
+	width: 192px;
+	border: 1px solid rgb(200, 200, 200);
+}
+.subNav li {
+  margin: 0; padding: 0;
+  width: 100%;
+  float: left;
+	border-bottom: 1px solid rgb(200, 200, 200);
+	clear: both;
+}
+.subNav li:last-child {
+  border-bottom: 0;
+}
+.subNav a {
+  color: black;
+  float: left;
+	width: 145px;
+	padding-left: 20px;
+  background: url("../images/gplaypattern.png") repeat fixed;
+}
+.subNav a:hover, .topNav a:hover {
+	color: rgb(48, 181, 255);
+}
+/********************************Content***************************************/
+.contentwrapper {
+  margin: 0 auto;
+  padding: 10px;
+  width: 60%;
+  background: url("../images/gplaypattern.png") repeat fixed;
+}
+.title {
+  margin-top: 62px;
+  padding: 10px 10px 0;
+}
+.title h1, .title h6, .pageTitle{
+  text-align: center;
+  font-size: 3.5em;
+  margin: 20px 20px 0;
+  font-family: "bfg font", Arial;
+  background-image: linear-gradient(rgb(105, 119, 250), rgb(224, 136, 4) 75%, rgb(248, 254, 137) 90%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.title h6 {
+  font-size: 1em;
+  margin: 0 20px 20px;
+}
+.title a {
+  text-decoration: none;
+}
+.pageTitle{
+  font-size: 2.5em;
+  font-family: 'Merienda', sans-serif;
+  margin: 2%;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+.content {
+  margin: 1px auto;
+  width: 90%;
+  overflow: hidden;
+}
+.content p{
+  margin: 2%;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.subtitle {
+  margin: 2%;
+  font-family: 'Merienda', sans-serif;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+.returntop{
+  display: none;
+  position: fixed;
+  bottom: 0; right: 0;
+  max-width: 200px;
+  max-height: 200px;
+}
+/******************************Image List**************************************/
+.imglist ul {
+  list-style-type: none;
+}
+.imglist h4 {
+  font-family: 'Merienda', Arial, serif;
+  font-size: 1.5em;
+}
+.imglist li img {
+  float: left;
+  margin: 0 15px 0 0;
+  max-width: 200px;
+  max-height: 200px;
+}
+.imglist li p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1em;
+}
+.imglist li {
+  margin: 0 auto;
+  width: 90%;
+  padding: 10px;
+  overflow: auto;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+#chapterselectlist li:hover {
+  background: rgb(200, 200, 200);
+  cursor: pointer;
+}
+#chapterselectlist a {
+  text-decoration: none;
+  color: black;
+}
+/*******************************Home Page**************************************/
+.main img {
+  float: left;
+  max-width: 20%;
+  margin: 0 2% 2% 10%;
+}
+.main .intro {
+  margin: 0 10% 2% 10%;
+  font-size: 1.2em;
+}
+#trailer {
+  clear: both;
+  text-align: center;
+}
+#trailer .subtitle {
+  text-align: left;
+}
+#trailer p {
+  text-align: left;
+}
+/********************************Chapters**************************************/
+.chapters .firstparagraph::first-letter {
+  font-size: 3em;
+  float: left;
+  padding-right: 5px;
+  font-family: 'Satisfy', cursive;
+}
+.chapters a {
+  text-decoration: none;
+  color: rgb(48, 181, 255);
+}
+.chapters .imagedescription {
+  border: 1px solid black;
+  text-align: center;
+  float: left;
+  font-size: 0.9em;
+  max-height: 45%;
+  margin: 2%;
+}
+.nextchapter{
+  position: fixed;
+  top: 50%;
+  right: 20%;
+  display: block;
+  margin: 0 auto;
+}
+.previouspage {
+  position: fixed;
+  top: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.nextchapter p, .previouspage p {
+  margin: 0;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.8em;
+}
+.nextchapter img,  .previouspage img {
+  max-width: 40px;
+  cursor: pointer;
+}
+/******************************Others Page*************************************/
+.imagelink {
+  float: left;
+  width: 30%;
+  margin: 1%;
+}
+.imagelink h2 {
+  font-family: 'Merienda', Arial, serif;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+.imagelink img {
+  max-width: 100%;
+}
+/******************************Roald Dahl**************************************/
+.roalddahl img {
+  float: left;
+  max-width: 40%;
+  margin: 0 2% 2% 10%;
+}
+.roalddahl p {
+  margin: 0 10% 2% 2%;
+}
+.roalddahl #popularstories {
+  clear: both;
+}
+.roalddahl li {
+  font-family: 'Montserrat', Arial, sans-serif;
+  width: 45%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+}
+/******************************Contact Us**************************************/
+.contactabout {
+  width: 45%;
+  float: left;
+}
+.contactform {
+  width: 45%;
+  float: right;
+}
+.contactform h2, .contactabout h2 {
+  font-family: 'Merienda', Arial, serif;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+.contactform form {
+  text-align: center;
+}
+.contactform p {
+
+}
+.contactform .forminput, .contactform select, .contactform textarea {
+  width: 70%;
+}
+/*******************************About Us***************************************/
+.aboutus .spanningimage {
+  max-width: 100%;
+}
+.aboutus .contactuslink {
+  text-decoration: none;
+  color: rgb(48, 181, 255);
+}
+/******************************Sorry Page**************************************/
+.sorrypage img {
+  display: block;
+  margin: 0 auto;
+  max-width: 60%;
+  max-height: 60%;
+}
+.sorrypage p {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+.sorrypage p:last-of-type {
+  font-size: 1.3em;
+  margin-top: 5px;
+}
+.sorrypage .return {
+  text-decoration: none;
+  color: rgb(48, 181, 255);
+}
+.sorrypage .return:hover {
+  background: rgb(200, 200, 200);
+  cursor: pointer;
+}
